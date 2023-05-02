@@ -10,33 +10,27 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>Awesome book</title>
+    <title>Awesome books</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <section id="book-list" class="content-section">
-        <h1>Awesome books</h1>
-        <div class="container">
-        </div>
-      </section>
-      <section id="add-book-form" class="content-section hidden">
-        <form class="form">
-          <div>
-            <input type="text" id="title" placeholder="Title" />
-          <span id="titleError"></span>
-          </div>
-          <div>
-            <input type="text" id="author" placeholder="Author" />
-          <span id="authorError"></span>
-          </div>
-          <div>
-            <button type="button" id="add-button">Add book</button>
-          </div>
-        </form>
-        
-      </section>
-    </main>
-    <script src="script.js"></script>
+    <ul id="book-list"></ul>
+
+    <hr />
+
+    <h1>Add a new book</h1>
+
+    <form>
+      <input type="text" id="title" placeholder="Title" />
+      <span id="titleError"></span>
+
+      <input type="text" id="author" placeholder="Author" />
+
+      <span id="authorError"></span>
+
+      <button type="submit" id="add-button">Add book</button>
+    </form>
+
+    <script src="index.js"></script>
   </body>
 </html>
