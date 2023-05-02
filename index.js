@@ -1,9 +1,9 @@
 class BookList {
   constructor() {
-    // Array to hold the list of books
+    // Array hold the books list.
     this.books = JSON.parse(localStorage.getItem('books')) || [];
 
-    // Get the error elements for author and title
+    // Error elements for author and title.
     this.errorElements = {
       author: document.getElementById('authorError'),
       title: document.getElementById('titleError'),
@@ -11,7 +11,7 @@ class BookList {
   }
 
   init() {
-    // Add an event listener to the form submit button
+    // An event listener added to the form submit btn
     const addButton = document.getElementById('add-button');
     addButton.addEventListener('click', (event) => {
       event.preventDefault();
@@ -22,11 +22,11 @@ class BookList {
         this.addBook(book);
         this.renderBookList();
 
-        // Reset the form inputs
+        //Form inputs reset
         document.getElementById('title').value = '';
         document.getElementById('author').value = '';
 
-        // Check if title and author are empty
+        // Check title and author space
       } else if (title === '') {
         this.showError('title', 'Title cannot be empty.');
       } else if (author === '') {
