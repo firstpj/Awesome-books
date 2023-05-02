@@ -8,21 +8,6 @@ function Books(title, author) {
   this.author = author;
 }
 let cards = [];
-
-function addBook(title, author) {
-  const book = new Books(title, author);
-  cards.push(book);
-  ShowCards();
-  const dataMarker = JSON.stringify(cards);
-  localStorage.setItem('data', dataMarker);
-}
-window.addEventListener('DOMContentLoaded', (event) => {
-  if (localStorage.getItem('data')) {
-    cards = JSON.parse(localStorage.getItem('data'));
-  }
-  ShowCards();
-});
-
 function ShowCards() {
   const removeDivs = document.querySelectorAll('.card');
   for (let i = 0; i < removeDivs.length; i++) {
@@ -46,13 +31,26 @@ function ShowCards() {
     deleteBook.addEventListener('click', (e) => {
       cards.splice(cards.indexOf(card), 1);
       e.target.parentNode.remove();
-      console.log(cards);
       const dataMarker = JSON.stringify(cards);
       localStorage.setItem('data', dataMarker);
-      
     });
   });
 }
+
+function addBook(title, author) {
+  const book = new Books(title, author);
+  cards.push(book);
+  ShowCards();
+  const dataMarker = JSON.stringify(cards);
+  localStorage.setItem('data', dataMarker);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('data')) {
+    cards = JSON.parse(localStorage.getItem('data'));
+  }
+   ShowCards();
+});
+
 submit.addEventListener('click', () => {
   if (titleInput.value === '' && authorInput.value === '') {
     return null;
