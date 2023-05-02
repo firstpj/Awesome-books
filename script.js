@@ -12,10 +12,20 @@ let cards = []
 function addBook(title, author) {
   const book = new Books(title, author);
   cards.push(book);
-  ShowCards()
-  const dataMarker = JSON.stringify(book);
+  ShowCards();
+  const dataMarker = JSON.stringify(cards);
     localStorage.setItem('data', dataMarker);
 }
+window.addEventListener('DOMContentLoaded', (event) => {
+  if (localStorage.getItem('data')) {
+    cards = JSON.parse(localStorage.getItem('data'));
+   
+
+  }
+  ShowCards();
+
+})
+
 function ShowCards(){
   const removeDivs = document.querySelectorAll('.card')
   for (let i = 0; i < removeDivs.length; i++) {
