@@ -1,12 +1,3 @@
-# capstone-project
-<a name="readme-top"></a>
-
-<div align="center">
-  
-  <br/>
-  <h3><b>Portolio Mobile first set up</b></h3>
-
-</div>
 
 # 📗 Table of Contents
 
@@ -28,12 +19,13 @@
 - [⭐️ Show your support](#support)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
-# 📖capstone-project <a name="about-project"></a>
 
 
-**capstone-project** This is a project about my portfolio webpage that begins with mobile screen sizes to desktops screen sizes.
+# 📖 Awesome-books <a name="about-project"></a>
+
+
+**Pair-Session** this is a pair programming session about awesome books in this project we add books with the title and author
+onto the body of the page dynamically with javascript
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -41,6 +33,7 @@
 
 <details>
   <summary>HTML,CSS</summary>
+  <summary>Javasript</summary>
   <summary>Linters</summary>
   <summary>Github</summary>
 </details>
@@ -48,13 +41,14 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Adding pictures**
-- **Using flex**
-- **Side bar menu**
+- **Add books dynamically**
+- **Set the cards on local storage**
+- **get cards on local storage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+[coming soon]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,10 +62,6 @@ In order to run this project you need:
 
 - A browser that supports html5 and css3
 
-### Setup
-
-This project doesn't need something to install
-
 ### Install
 
 - N/A
@@ -79,14 +69,6 @@ This project doesn't need something to install
 ### Usage
 
 - N/A
-
-### Run tests
-
-- N/A
-
-### Deployment
-
-This project doesn't need to be deployed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,13 +80,19 @@ This project doesn't need to be deployed
 - Twitter: [@AkordaC](https://twitter.com/AkordaC)
 - LinkedIn: [Collins Akorda](https://www.linkedin.com/in/collins-akorda-bb46b2232/)
 
+👤 **Okongo Derrick**
+    
+- GitHub: [@firstpj](https://github.com/derrick14/51)
+- Twitter: [@AkordaC](https://twitter.com/derrick1451)
+- LinkedIn: [Collins Akorda](https://www.linkedin.com/in/okongo-derrick)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add javascript**
-- **Add a video**
-- **Create a form**
+- **style elements with flex-box and grid**
+- **use classes to display the books**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,24 +102,18 @@ Contributions, issues, and feature requests are welcome!
 
 I'm open to any suggestions about this project.
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/firstpj/Awesome-books/issues).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project don't hesitate to give it a start. 
 
-<!-- ACKNOWLEDGEMENTS -->
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I want to give special thanks to Microverse for the great opportunity given to me to realise my dreams.
-
-Thanks to [Cindy Shin](https://www.behance.net/adagio07) for the great design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
