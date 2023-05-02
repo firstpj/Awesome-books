@@ -13,6 +13,8 @@ function addBook(title, author) {
   const book = new Books(title, author);
   cards.push(book);
   ShowCards()
+  const dataMarker = JSON.stringify(book);
+    localStorage.setItem('data', dataMarker);
 }
 function ShowCards(){
   const removeDivs = document.querySelectorAll('.card')
