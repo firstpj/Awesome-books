@@ -10,10 +10,10 @@ function Books(title, author) {
 let cards = [];
 function ShowCards() {
   const removeDivs = document.querySelectorAll('.card');
-  for (let i = 0; i < removeDivs.length; i++) {
-    removeDivs[i].remove();
-  }
-  cards.map((card) => {
+  removeDivs.forEach((div) => {
+    div.remove();
+  });
+  cards.forEach((card) => {
     const div = document.createElement('div');
     div.classList.add('card');
     const heading = document.createElement('h1');
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('data')) {
     cards = JSON.parse(localStorage.getItem('data'));
   }
-   ShowCards();
+  ShowCards();
 });
 
 submit.addEventListener('click', () => {
@@ -56,5 +56,5 @@ submit.addEventListener('click', () => {
     return null;
   }
   addBook(titleInput.value, authorInput.value);
-  form.reset();
+  return form.reset();
 });
