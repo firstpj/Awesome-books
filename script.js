@@ -19,8 +19,6 @@ function addBook(title, author) {
 window.addEventListener('DOMContentLoaded', (event) => {
   if (localStorage.getItem('data')) {
     cards = JSON.parse(localStorage.getItem('data'));
-   
-
   }
   ShowCards();
 
@@ -50,6 +48,8 @@ function ShowCards(){
      cards.splice(cards.indexOf(card), 1);
      e.target.parentNode.remove()
      console.log(cards)
+     const dataMarker = JSON.stringify(cards);
+     localStorage.setItem('data', dataMarker);
 
   });
   })  
