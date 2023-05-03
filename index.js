@@ -22,11 +22,11 @@ class BookList {
         this.addBook(book);
         this.renderBookList();
 
-        //Form inputs reset
+        // Form inputs reset
         document.getElementById('title').value = '';
         document.getElementById('author').value = '';
 
-        //Check title and author space
+        // Check title and author space
       } else if (title === '') {
         this.showError('title', 'Title cannot be empty.');
       } else if (author === '') {
