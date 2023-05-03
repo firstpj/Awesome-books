@@ -1,9 +1,9 @@
 class BookList {
   constructor() {
-    // Array hold the books list.
+    // Array to hold the list of books
     this.books = JSON.parse(localStorage.getItem('books')) || [];
 
-    // Error elements for author and title.
+    // Get the error elements for author and title
     this.errorElements = {
       author: document.getElementById('authorError'),
       title: document.getElementById('titleError'),
@@ -11,7 +11,26 @@ class BookList {
   }
 
   init() {
-    // An event listener added to the form submit btn
+    // Add event listeners to the navigation links
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        // Remove active class from all nav items
+        navLinks.forEach((navLink) => {
+          navLink.classList.remove('active');
+        });
+
+        // Add active class to the clicked nav item
+        link.classList.add('active');
+
+        const sectionId = link.getAttribute('href').substring(1);
+        this.showSection(sectionId);
+      });
+    });
+
+    // Add an event listener to the form submit button
     const addButton = document.getElementById('add-button');
     addButton.addEventListener('click', (event) => {
       event.preventDefault();
@@ -26,7 +45,7 @@ class BookList {
         document.getElementById('title').value = '';
         document.getElementById('author').value = '';
 
-        // Check title and author space
+        // Check if title and author are empty
       } else if (title === '') {
         this.showError('title', 'Title cannot be empty.');
       } else if (author === '') {
@@ -68,6 +87,12 @@ class BookList {
   renderBookList() {
     const bookList = document.getElementById('book-list');
     bookList.innerHTML = '';
+
+    // Header for list books page
+    const h1 = document.createElement('h1');
+    h1.textContent = 'All Awesome Books';
+    bookList.appendChild(h1);
+
     this.books.forEach((book, index) => {
       const li = document.createElement('li');
       li.textContent = `${book.title} by ${book.author}`;
@@ -81,7 +106,29 @@ class BookList {
       bookList.appendChild(li);
     });
   }
+
+  showSection = (sectionId) => {
+    // Hide all content sections
+    const contentSections = document.querySelectorAll('.content-section');
+    contentSections.forEach((section) => {
+      section.classList.add('hidden');
+    });
+
+    // Show the selected content section
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.remove('hidden');
+  };
 }
 
 const bookList = new BookList();
 bookList.init();
+
+function updateDateTime() {
+  const now = new Date();
+  const date = now.toLocaleDateString();
+  const time = now.toLocaleTimeString();
+  document.getElementById('datetime').innerHTML = `${date} ${time}`;
+}
+
+// call updateDateTime function every second to update the time
+setInterval(updateDateTime, 1000);
