@@ -14,18 +14,60 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <ul id="book-list"></ul>
-    <hr />
+    <nav>
+      <a href="#">Awesome Books</a>
+      <ul>
+        <li><a href="#book-list" class="active">List</a></li>
+        <li><a href="#add-book-form">Add new</a></li>
+        <li><a href="#contact-info">Contact</a></li>
+      </ul>
+    </nav>
 
-    <h1>Add a new book</h1>
+    <!-- display current date and time -->
+    <section id="current-time">
+      <p id="datetime"></p>
+    </section>
 
-    <form-section>
-      <input type="text" id="title" placeholder="Title" />
-      <span id="titleError"></span>
-      <input type="text" id="author" placeholder="Author" />
-      <span id="authorError"></span>
-      <button type="submit" id="add-button">Add book</button>
-    </form-section>
+    <main>
+      <section id="book-list" class="content-section"></section>
+
+      <section id="add-book-form" class="content-section hidden">
+        <h1>Add a new book</h1>
+        <form>
+          <input type="text" id="title" placeholder="Title" />
+          <span id="titleError"></span>
+
+          <input type="text" id="author" placeholder="Author" />
+
+          <span id="authorError"></span>
+
+          <button type="submit" id="add-button">Add book</button>
+        </form>
+      </section>
+
+      <section id="contact-info" class="content-section hidden">
+        <h2>Contact</h2>
+        <h3>
+          How can We help? Feel free to contact our team, we have experts on grand who can answer your questions.
+          Bellow is our contact information.
+        </h3>
+        <ul>
+          <li>Email: akpocollins2005@gmail.com</li>
+          <li>Phone: +233(0)542888950</li>
+          <li>Address: Central Region. Ghana.</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Add a section to display the current date and time -->
+    <section id="current-time">
+      <p id="datetime"></p>
+    </section>
+
+    <footer>
+      <p>&copy2023 Collins Akorda and </p>
+    </footer>
+
     <script src="index.js"></script>
   </body>
 </html>
