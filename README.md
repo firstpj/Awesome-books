@@ -109,7 +109,7 @@ Feel free to check the [issues page](https://github.com/firstpj/Awesome-books/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project don't hesitate to give it a start. 
+If you like this project don't hesitate to give it a start. ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
