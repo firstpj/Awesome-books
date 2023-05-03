@@ -25,7 +25,7 @@
 
 
 **Pair-Session** this is a pair programming session about awesome books in this project we add books with the title and author
-onto the body of the page dynamically with javascript
+onto the body of the page dynamically with javascript using classes to generate the books
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -91,7 +91,7 @@ In order to run this project you need:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **style elements with flex-box and grid**
-- **use classes to display the books**
+- **add a navigation bar**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
