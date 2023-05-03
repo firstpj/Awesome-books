@@ -14,6 +14,8 @@ form-section {
   max-width: 30rem;
   width: 50%;
   margin: 0 auto 1rem;
+  font-weight: bolder;
+  gap: 1rem;
 }
 
 input[type='text'] {
@@ -24,7 +26,7 @@ input[type='text'] {
 }
 
 button[type='submit'] {
-  background-color: #ff00aa;
+  background-color: #a72f31;
   color: #fff;
   padding: 0.5rem;
   border: none;
@@ -36,7 +38,7 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-  background-color: #16e250;
+  background-color: #200808;
 }
 
 ul {
@@ -58,7 +60,7 @@ li {
 }
 
 button {
-  background-color: #f407b1;
+  background-color: #a72f31;
   color: #fff;
   padding: 0.5rem;
   border: none;
@@ -68,7 +70,7 @@ button {
 }
 
 button:hover {
-  background-color: #16f18b;
+  background-color: #200808;
 }
 
 span {
