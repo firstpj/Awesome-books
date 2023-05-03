@@ -41,7 +41,7 @@ class BookList {
         this.addBook(book);
         this.renderBookList();
 
-        // Reset the form inputs
+        // Form inputs reset
         document.getElementById('title').value = '';
         document.getElementById('author').value = '';
 
